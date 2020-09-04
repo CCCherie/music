@@ -54,13 +54,9 @@ def loginView(request):
                 tips = '注册成功'
             else:
                 if user.errors.get('username',''):
-                    user.save()
-                    tips = '注册成功'
+                    tips = user.errors.get('username','注册失败')
                 else:
-                    if user.errors.get('username',''):
-                        tips = user.errors.get('username','注册失败')
-                    else:
-                        tips = user.errors.get('mobile','注册失败')
+                    tips = user.errors.get('mobile','注册失败')
     return render(request,'login.html',locals())        
 
 
