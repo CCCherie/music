@@ -106,7 +106,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'root',
         # 改为本机系统的IP地址
-        'HOST': '101.37.83.159',
+        'HOST': '127.0.0.1',
         'POST': '3306',
     }
 }
@@ -155,6 +155,6 @@ AUTH_USER_MODEL = 'user.MyUser'
 STATIC_URL = '/static/'
 # 设置项目上线后使用的静态资源
 # STATIC_ROOT = 'd:/music/music/static'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = '/home/cherie/music/static/'
 # STATICFILES_DIRS用于收集admin的静态资源文件
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static/'),]
